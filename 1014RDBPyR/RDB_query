@@ -1,0 +1,38 @@
+select * from totala;
+
+
+MAEquery = ("""select YMD, roadname, direct, timezone, sum(carvolume) volume, Weekday, rain 
+from totala where(roadname='民權東路' and direct='往東' and timezone='上午尖峰')group by YMD,Weekday,rain;""")
+
+MAWquery = ("""select YMD, roadname, direct, timezone, sum(carvolume) volume, Weekday, rain 
+from totala where(roadname='民權東路' and direct='往西' and timezone='上午尖峰')group by YMD,Weekday,rain;""")
+
+MPEquery = ("""select YMD, roadname, direct, timezone, sum(carvolume) volume, Weekday, rain 
+from totala where(roadname='民權東路' and direct='往東' and timezone='下午尖峰')group by YMD,Weekday,rain;""")
+
+MPWquery = ("""select YMD, roadname, direct, timezone, sum(carvolume) volume, Weekday, rain 
+from totala where(roadname='民權東路' and direct='往西' and timezone='下午尖峰')group by YMD,Weekday,rain;""")
+
+TANquery = ("""select YMD, roadname, direct, timezone, sum(carvolume) volume, Weekday, rain 
+from totala where(roadname='堤頂大道' and direct='往北' and timezone='上午尖峰')group by YMD,Weekday,rain;""")
+
+TASquery = ("""select YMD, roadname, direct, timezone, sum(carvolume) volume, Weekday, rain 
+from totala where(roadname='堤頂大道' and direct='往南' and timezone='上午尖峰')group by YMD,Weekday,rain;""")
+
+TPNquery = ("""select YMD, roadname, direct, timezone, sum(carvolume) volume, Weekday, rain 
+from totala where(roadname='堤頂大道' and direct='往北' and timezone='下午尖峰')group by YMD,Weekday,rain;""") 
+
+TPSquery = ("""select YMD, roadname, direct, timezone, sum(carvolume) volume, Weekday, rain 
+from totala where(roadname='堤頂大道' and direct='往南' and timezone='下午尖峰')group by YMD,Weekday,rain;""") 
+
+GANquery = ("""select YMD, roadname, direct, timezone, sum(carvolume) volume, Weekday, rain 
+from totala where(roadname='舊宗路' and direct='往北' and timezone='上午尖峰')group by YMD,Weekday,rain;""") 
+
+GASquery = ("""select YMD, roadname, direct, timezone, sum(carvolume) volume, Weekday, rain 
+from totala where(roadname='舊宗路' and direct='往南' and timezone='上午尖峰')group by YMD,Weekday,rain;""") 
+
+GPNquery = ("""select YMD, roadname, direct, timezone, sum(carvolume) volume, Weekday, rain 
+from totala where(roadname='舊宗路' and direct='往北' and timezone='下午尖峰')group by YMD,Weekday,rain;""") 
+
+GPSquery = ("""select YMD, roadname, direct, timezone, sum(carvolume) volume, Weekday, rain 
+from totala where(roadname='舊宗路' and direct='往南' and timezone='下午尖峰')group by YMD,Weekday,rain;""") 

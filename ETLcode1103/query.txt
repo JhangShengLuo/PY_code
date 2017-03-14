@@ -1,0 +1,5 @@
+query exception
+<ipykernel.iostream.OutStream object at 0x103add4d0>
+<class 'mysql.connector.errors.ProgrammingError'>
+1146 (42S02): Table '1107vd.vpbtd70' doesn't exist
+<traceback object at 0x103d89128>

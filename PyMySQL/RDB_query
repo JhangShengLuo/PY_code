@@ -1,0 +1,12 @@
+
+
+
+select YMD, roadname, direct, timezone, sum(carvolume), Weekday from totala where(roadname='堤頂大道' and direct='往南' and timezone='下午尖峰')group by YMD,Weekday;
+
+select YMD, roadname, direct, timezone, sum(carvolume), Weekday, rain from totala where(roadname='堤頂大道' and direct='往南' and timezone='下午尖峰')group by YMD,Weekday,rain;
+
+
+select * from totala;
+
+
+

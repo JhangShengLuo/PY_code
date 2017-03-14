@@ -1,0 +1,9 @@
+<open file '<stderr>', mode 'w' at 0x10027d1e0>
+<type 'exceptions.RuntimeError'>
+The R home directory could not be determined.
+
+    Try to install R <https://www.r-project.org/>,
+    set the R_HOME environment variable to the R home directory, or
+    add the directory of the R interpreter to the PATH environment variable.
+    
+<traceback object at 0x1028aa830>

@@ -1,0 +1,1 @@
+insert into WVNUNJ20(EQIPnumber,location,direct,YMD,hour,laneNumber,addTotal,15Total,truckflow,carflow,scooterflow,avgspeed,avgPercent,avgCarSpace) values('VNUNJ20','民權東路三段142號對面人行道上','往西','2016-10-11','00:00:00',3,231.0,239.0,16.0,215.0,0.0,50.72013,0.70666665,237.11);

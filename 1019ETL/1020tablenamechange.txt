@@ -1,0 +1,50 @@
+
+table name要改！！！！
+
+
+堤頂大道往北加總
+
+select ND21.direct,ND21.YMD,ND21.hour,(ND21.15Total + ND13.15Total + ND14.15Total + ND15.15Total + ND22.15Total + ND23.15Total) 'total' ,rain.rain,rain.WD from ND21 join ND13 on (ND21.YMD=ND13.YMD and ND21.hour=ND13.hour) join ND14 on (ND21.YMD=ND14.YMD and ND21.hour=ND14.hour)join ND15 on (ND21.YMD=ND15.YMD and ND21.hour=ND15.hour)join ND22 on (ND21.YMD=ND22.YMD and ND21.hour=ND22.hour)join ND23 on (ND21.YMD=ND23.YMD and ND21.hour=ND23.hour)join rain on ND21.YMD=rain.YMD;
+
+18.72秒
+
+
+
+ 堤頂大道往南加總
+
+select SD13.direct,SD13.YMD,SD13.hour,(SD13.15Total + SD14.15Total + SD15.15Total + SD22.15Total + SD23.15Total) 'total' ,rain.rain,rain.WD from SD13 join SD14 on (SD13.YMD=SD14.YMD and SD13.hour=SD14.hour)join SD15 on (SD13.YMD=SD15.YMD and SD13.hour=SD15.hour)join SD22 on (SD13.YMD=SD22.YMD and SD13.hour=SD22.hour)join SD23 on (SD13.YMD=SD23.YMD and SD13.hour=SD23.hour)join rain on SD13.YMD=rain.YMD;
+
+
+14.08秒
+
+
+
+民權往東
+select ED28.direct,ED28.YMD,ED28.hour,(ED28.15Total + ED29.15Total + ED30.15Total) 'total' ,rain.rain,rain.WD from ED28 join ED29 on (ED28.YMD=ED29.YMD and ED28.hour=ED29.hour) join ED30 on (ED28.YMD=ED30.YMD and ED28.hour=ED30.hour)join rain on ED28.YMD=rain.YMD;
+
+5.81秒
+
+
+民權往西
+
+
+
+select WD28.direct,WD28.YMD,WD28.hour,(WD28.15Total + WD29.15Total + WD30.15Total) 'total' ,rain.rain,rain.WD from WD28 join WD29 on (WD28.YMD=WD29.YMD and WD28.hour=WD29.hour) join WD30 on (WD28.YMD=WD30.YMD and WD28.hour=WD30.hour)join rain on WD28.YMD=rain.YMD;
+
+6.25秒
+
+
+舊宗往北
+
+select ND18.direct,ND18.YMD,ND18.hour,ND18.15Total ,rain.rain,rain.WD from ND18 join rain on ND18.YMD=rain.YMD;
+ 
+0.08秒
+
+舊宗往南
+
+select SD18.direct,SD18.YMD,SD18.hour,SD18.15Total ,rain.rain,rain.WD from SD18 join rain on SD18.YMD=rain.YMD;
+
+
+0.08秒
+
+
